@@ -34,7 +34,7 @@ def get_movie(query):
         links = movie_page_link.find_all("a", {'rel': 'noopener', 'data-wpel-link': 'internal'})
         final_links = {}
         for i in links:
-            url = f"https://shortnerfly.com/member/dashboard['href']}"
+            url = f"https://shortnerfly.com/api?api=beafe1d8b68189557b001703953ff0a9c30b6429&url=yourdestinationlink.com&alias=CustomAlias"
             response = requests.get(url)
             link = response.json()
             final_links[f"{i.text}"] = link['shortenedUrl']
